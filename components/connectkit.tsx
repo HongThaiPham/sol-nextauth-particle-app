@@ -7,6 +7,7 @@ import { authWalletConnectors } from "@particle-network/connectkit/auth";
 import type { Chain } from "@particle-network/connectkit/chains";
 // embedded wallet start
 import { EntryPosition, wallet } from "@particle-network/connectkit/wallet";
+
 // embedded wallet end
 
 // solana start
@@ -35,6 +36,10 @@ const config = createConfig({
   projectId,
   clientKey,
   appId,
+  //Mainnet: 101, Testnet: 102, Devnet: 103
+  initialChainId: {
+    solana: 103,
+  },
   appearance: {
     recommendedWallets: [
       { walletId: "phantom", label: "Recommended" },
